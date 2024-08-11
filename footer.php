@@ -1,7 +1,7 @@
-<div class="footer">
-    <div class="container-fluid">
-        Footer
+    <div class="footer">
+        <div class="container-fluid">
+            Footer
+        </div>
     </div>
-</div>
-
+</body>
 <?php wp_footer();?>
