@@ -7,7 +7,7 @@ add_theme_support('custom-logo');
 add_theme_support('post-thumbnails'); 
 
 //Main stylesheet compiled with sass
-wp_enqueue_style('main', get_template_directory_uri() . '/main.css', array(), filemtime(get_template_directory() . '/main.css'), false);
+wp_enqueue_style('main', get_stylesheet_directory_uri() . '/main.css', array(), filemtime(get_template_directory() . '/main.css'), false);
 
 //Custom image sizes
 add_image_size('medium-square', 500, 500, true);
