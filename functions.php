@@ -6,8 +6,11 @@ register_nav_menu('main-menu', 'Main menu');
 add_theme_support('custom-logo');
 add_theme_support('post-thumbnails'); 
 
-//Main stylesheet compiled with sass
-wp_enqueue_style('main', get_stylesheet_directory_uri() . '/main.css', array(), filemtime(get_template_directory() . '/main.css'), false);
+function westart_enqueue_style() {
+    //Main stylesheet compiled with sass
+    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/main.css');
+}
+add_action('wp_enqueue_scripts', 'westart_enqueue_style');
 
 //Custom image sizes
 add_image_size('medium-square', 500, 500, true);
